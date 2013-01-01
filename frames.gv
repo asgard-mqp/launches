@@ -1,7 +1,0 @@
-digraph G {
-"odom" -> "base_link"[label="Broadcaster: /diff_tf\nAverage rate: 10.161 Hz\nMost recent transform: 1508439434.345 ( 0.126 sec old)\nBuffer length: 4.724 sec\n"];
-edge [style=invis];
- subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 1508439434.472"[ shape=plaintext ] ;
- }->"odom";
-}
