@@ -1,0 +1,11 @@
+<launch>
+  <machine
+     name="odroid"
+     default="never"
+     address="odroid" user="odroid"
+     password="odroid"
+     env-loader="/home/odroid/launches/env.odroid"
+  />
+
+  <include file="odroid/test.launch" />
+</launch>
