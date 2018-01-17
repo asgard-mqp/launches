@@ -6,7 +6,7 @@ to launch the file start.launch, call launch.sh:
 $ ./launch.sh
 ```
 
-to launch the system with FQDN hosts and ros_master_uris, use the -o flag:
+to launch the system with FQDNs for the uris, use the -o flag:
 
 ```sh
 $ ./launch.sh -o
@@ -26,7 +26,7 @@ to start an interactive ROS session, source env.tegra or env.odroid, as appropri
 $ . env.tegra
 ```
 
-to start an interactive ROS session with FQDN, use the ONLINE enviroment variable:
+to start an interactive ROS session with FQDNs, use the ONLINE enviroment variable:
 
 ```sh
 $ ONLINE=1 . env.tegra
