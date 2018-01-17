@@ -30,4 +30,21 @@ to start an interactive ROS session with FQDNs, use the ONLINE enviroment variab
 
 ```sh
 $ ONLINE=1 . env.tegra
+
+
+###Record
+```sh
+rosbag record -a --chunksize=4096 -b 0
+```
+###Build
+Tegra
+from ~/catkin_ws
+```sh
+catkin_make_isolated --install --use-ninja
+```
+
+Oroid
+from ~/catkin_ws
+```sh
+catkin_make
 ```
