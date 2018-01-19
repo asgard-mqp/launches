@@ -23,13 +23,14 @@ $ ./launch.sh file.launch
 to start an interactive ROS session, source env.tegra or env.odroid, as appropriate:
 
 ```sh
-$ . env.tegra
+$ . ~/catkin_ws/src/launches/env.tegra
 ```
 
 to start an interactive ROS session with FQDNs, use the ONLINE enviroment variable:
 
 ```sh
-$ ONLINE=1 . env.tegra
+$ ONLINE=1 . ~/catkin_ws/src/launches/env.tegra
+
 ```
 
 ## Record
