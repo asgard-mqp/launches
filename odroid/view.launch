@@ -1,11 +1,11 @@
 <launch>
  
   <node name="left_view" pkg="image_view" type="image_view" respawn="false" >
-    <remap from="image" to="/cam0/image_raw"/>
+    <remap from="image" to="/left/image_raw"/>
     <param name="autosize" value="true" />
   </node>
   <node name="right_view" pkg="image_view" type="image_view" respawn="false" >
-    <remap from="image" to="/cam1/image_raw"/>
+    <remap from="image" to="/right/image_raw"/>
     <param name="autosize" value="true" />
   </node>
   

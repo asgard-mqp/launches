@@ -2,13 +2,21 @@
   <node name="save_left" pkg="image_view" type="image_saver" respawn="false" >
     <remap from="image" to="/left/image_raw"/>
     <param name="save_all_image" value="false" />
-    <param name="filename_format" value="/home/odroid/left%04d.%s" />
+    <param name="filename_format" value="/media/odroid/log/Calib files/left%04d.%s" />
   </node>
   
   <node name="save_right" pkg="image_view" type="image_saver" respawn="false" >
     <remap from="image" to="/right/image_raw"/>
-    <param name="filename_format" value="/media/odroid/4b0a9c80-8573-44ad-b867-04859379d64e/Calib_Files/right%04d.%s" />
+    <param name="filename_format" value="/media/odroid/log/Calib files/right%04d.%s" />
     <param name="save_all_image" value="false" />
   </node>
-
+  <node name="left_view" pkg="image_view" type="image_view" respawn="false" >
+    <remap from="image" to="/left/image_raw"/>
+    <param name="autosize" value="true" />
+  </node>
+  <node name="right_view" pkg="image_view" type="image_view" respawn="false" >
+    <remap from="image" to="/right/image_raw"/>
+    <param name="autosize" value="true" />
+  </node>
+  
 </launch>
