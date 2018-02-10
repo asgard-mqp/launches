@@ -41,7 +41,7 @@ rosbag record -a --chunksize=4096 -b 0
 Tegra
 from ~/catkin_ws
 ```sh
-catkin_make_isolated --install --use-ninja
+catkin_make_isolated --install --use-ninja -DCMAKE_BUILD_TYPE=Release
 ```
 
 Oroid
