@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find robot_driver)/launch/move_base.launch" />
+  <include file="$(dirname)/load_map.launch" />
+</launch>
