@@ -21,7 +21,7 @@
       type="cartographer_node" args="
           -configuration_directory
               $(find warper)/configuration_files
-          -configuration_basename turtlebot_urg_lidar_2d.lua
+          -configuration_basename turtlebot_urg_lidar_2d_localization.lua
           -load_state_filename $(find warper)/configuration_files/full_map.pbstream"
       output="screen">
   </node>
