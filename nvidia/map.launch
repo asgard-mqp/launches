@@ -24,9 +24,15 @@
           -configuration_basename turtlebot_urg_lidar_2d.lua"
       output="screen">
   </node>
-  <node pkg="urg_node" type="urg_node" name="Hokuyo" > 
+  <node pkg="urg_node" type="urg_node" name="Hokuyo2" > 
+    <param name="serial_port" value="/dev/ttyACM2"/>
     <remap from="scan" to="rawScan"/>
   </node>
+  <node pkg="urg_node" type="urg_node" name="Hokuyo3" >
+    <param name="serial_port" value="/dev/ttyACM3"/>
+    <remap from="scan" to="rawScan"/>
+  </node>
+
   <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
     <rosparam command="load" file="$(find warper)/configuration_files/filter.yaml" /> 
     <remap from="scan" to="rawScan" />
