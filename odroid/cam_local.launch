@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="uvc_camera" type="uvc_stereo_node" name="uvc_camera_stereo" machine="odroid">
+  <node pkg="uvc_camera" type="uvc_stereo_node" name="uvc_camera_stereo">
     <param name="width" type="int" value="640" />
     <param name="height" type="int" value="480" />
     <param name="fps" type="int" value="30" />
@@ -12,4 +12,16 @@
     <param name="left/device" type="string" value="/dev/video1" />
     <param name="right/device" type="string" value="/dev/video0" />
   </node>
+    <node pkg="svo_ros" type="svo_node" name="svo" clear_params="true" output="screen">
+    <!-- Camera and IMU topics to subscribe to -->
+    <param name="cam1_topic" value="/left/image_raw" type="str" />
+    <param name="cam0_topic" value="/right/image_raw" type="str" />
+    <param name="calib_file" value="$(find svo_ros)/calib/fisheyeTry2.yaml" type="str" />
+    <rosparam file="$(find svo_ros)/param/stereo_fisheye.yaml" />
+  </node>
+
+
+
+
+
 </launch>

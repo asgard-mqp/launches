@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# env 1>&2
+
+source /opt/ros/indigo/setup.bash
+source /home/odroid/svo_install_ws/install/setup.bash --extend
+source /home/odroid/catkin_ws/devel/setup.bash
+source /home/odroid/svo_install_overlay_ws/devel/setup.bash
+
+export ROS_HOSTNAME=localhost
+export ROS_MASTER_URI=http://localhost:11311/
