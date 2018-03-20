@@ -15,14 +15,15 @@
 -->
 
 <launch>
+ <include file="$(find robot_driver)/move_base.launch" />
 
- <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="-.2 0 0 3.14159 0 0 base_link laser 5" />
+ <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="-0.216 0 0 3.14159 0 0 base_link laser 5" />
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory
               $(find warper)/configuration_files
           -configuration_basename turtlebot_urg_lidar_2d_localization.lua
-          -load_state_filename $(find warper)/configuration_files/with_box.pbstream"
+          -load_state_filename $(find warper)/configuration_files/new_shifted.pbstream"
       output="screen">
   </node>
   <node pkg="urg_node" type="urg_node" name="Hokuyo2" > 

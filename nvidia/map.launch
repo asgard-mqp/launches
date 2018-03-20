@@ -15,8 +15,9 @@
 -->
 
 <launch>
+ <include file="$(find robot_driver)/move_base.launch" />
 
- <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="0 0 0 3.14159 0 0 base_link laser 5" />
+ <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="-0.216 0 0 3.14159 0 0 base_link laser 5" />
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory
