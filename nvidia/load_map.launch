@@ -26,12 +26,8 @@
           -load_state_filename $(find warper)/configuration_files/new_shifted.pbstream"
       output="screen">
   </node>
-  <node pkg="urg_node" type="urg_node" name="Hokuyo2" > 
-    <param name="serial_port" value="/dev/ttyACM2"/>
-    <remap from="scan" to="rawScan"/>
-  </node>
-  <node pkg="urg_node" type="urg_node" name="Hokuyo3" >
-    <param name="serial_port" value="/dev/ttyACM3"/>
+  <node pkg="urg_node" type="urg_node" name="Hokuyo" > 
+    <param name="serial_port" value="/dev/hokuyo"/>
     <remap from="scan" to="rawScan"/>
   </node>
 
