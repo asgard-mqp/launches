@@ -1,4 +1,0 @@
-ENV{ID_VENDOR_ID}=="2888", ATTRS{interface}=="VEX Robotics Communications Port", ENV{ID_MODEL_ID}=="0501", SYMLINK+="v5brainUSB"
-ENV{ID_VENDOR_ID}=="2888", ATTRS{interface}=="VEX Robotics User Port", ENV{ID_MODEL_ID}=="0501", SYMLINK+="v5dataUSB"
-ENV{ID_VENDOR_ID}=="15d1", ENV{ID_MODEL_ID}=="0000", SYMLINK+="hokuyo"
-
