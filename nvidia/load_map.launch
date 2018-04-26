@@ -15,9 +15,9 @@
 -->
 
 <launch>
- <include file="$(find robot_driver)/move_base.launch" />
+  <include file="$(find robot_driver)/move_base.launch" />
 
- <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="-0.216 0 0 3.14159 0 0 base_link laser 5" />
+  <node pkg="tf" type="static_transform_publisher" name="field_odom_broadcaster" args="-0.216 0 0 3.14159 0 0 base_link laser 5" />
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory
@@ -30,6 +30,10 @@
     <param name="serial_port" value="/dev/hokuyo"/>
     <remap from="scan" to="rawScan"/>
   </node>
+
+  <!-- x: (17.75 in) / 2 => meters -->
+  <!-- y: -6 feet => meters -->
+  <node pkg="tf" type="static_transform_publisher" name="field_origin_broadcaster" args="0.22542 1.829 0 -1.5708 0 3.14159 map field 100" />
 
   <node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
     <rosparam command="load" file="$(find warper)/configuration_files/filter.yaml" /> 
