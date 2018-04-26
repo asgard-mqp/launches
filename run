@@ -1,0 +1,7 @@
+#!/bin/bash
+(cd ~/Documents/brain_driver; make; prosv5 upload) &&
+#export ROS_MASTER_URI=http://localhost:11311/
+#export ROS_HOSTNAME=localhost
+#roslaunch robot_driver driver.launch
+#roslaunch src/launches/nvidia/map.launch
+roslaunch src/launches/nvidia/load_map.launch

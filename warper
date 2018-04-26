@@ -1,0 +1,4 @@
+export ROS_MASTER_URI=http://tegra-ubuntu-ethernet.dyn.wpi.edu:11311
+export ROS_HOSTNAME=tegra-ubuntu-ethernet.dyn.wpi.edu
+source devel/setup.bash
+roslaunch warper De-Warper.launch

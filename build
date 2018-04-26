@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/catkin_ws
+catkin_make_isolated --install --use-ninja -DCMAKE_BUILD_TYPE=Release

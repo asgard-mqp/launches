@@ -1,0 +1,4 @@
+export ROS_MASTER_URI=http://tabor-ethernet.dyn.wpi.edu:11311
+export ROS_HOSTNAME=tegra-ubuntu-ethernet.dyn.wpi.edu
+source devel/setup.bash
+roslaunch darknet_ros darknet_ros.launch
